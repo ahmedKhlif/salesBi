@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\SalesAnalysisCube.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|solutionrelative:SalesAnalysisCube\\SalesAnalysisCube.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Bi.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|solutionrelative:SalesAnalysisCube\\Bi.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|solutionrelative:SalesAnalysisCube\\Dim Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Customer.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|solutionrelative:SalesAnalysisCube\\Dim Customer.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Product.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|solutionrelative:SalesAnalysisCube\\Dim Product.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Sales Rep.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{5AE638F6-9B15-3D91-3CAD-8544C4D4E166}|SalesAnalysisCube\\SalesAnalysisCube.dwproj|solutionrelative:SalesAnalysisCube\\Dim Sales Rep.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dim Date.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Date.dim",
+              "RelativeDocumentMoniker": "SalesAnalysisCube\\Dim Date.dim",
+              "ToolTip": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Date.dim [Conception]",
+              "RelativeToolTip": "SalesAnalysisCube\\Dim Date.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T18:11:42.163Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SalesAnalysisCube.cube [Conception]",
+              "DocumentMoniker": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\SalesAnalysisCube.cube",
+              "RelativeDocumentMoniker": "SalesAnalysisCube\\SalesAnalysisCube.cube",
+              "ToolTip": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\SalesAnalysisCube.cube [Conception]",
+              "RelativeToolTip": "SalesAnalysisCube\\SalesAnalysisCube.cube [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T17:57:53.151Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bi.dsv [Conception]",
+              "DocumentMoniker": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Bi.dsv",
+              "RelativeDocumentMoniker": "SalesAnalysisCube\\Bi.dsv",
+              "ToolTip": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Bi.dsv [Conception]",
+              "RelativeToolTip": "SalesAnalysisCube\\Bi.dsv [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T17:52:25.462Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dim Customer.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Customer.dim",
+              "RelativeDocumentMoniker": "SalesAnalysisCube\\Dim Customer.dim",
+              "ToolTip": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Customer.dim [Conception]",
+              "RelativeToolTip": "SalesAnalysisCube\\Dim Customer.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T20:49:20.287Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dim Product.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Product.dim",
+              "RelativeDocumentMoniker": "SalesAnalysisCube\\Dim Product.dim",
+              "ToolTip": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Product.dim [Conception]",
+              "RelativeToolTip": "SalesAnalysisCube\\Dim Product.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T20:50:25.714Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dim Sales Rep.dim [Conception]",
+              "DocumentMoniker": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Sales Rep.dim",
+              "RelativeDocumentMoniker": "SalesAnalysisCube\\Dim Sales Rep.dim",
+              "ToolTip": "C:\\Users\\Asus TUF\\source\\repos\\SalesAnalysisCube\\SalesAnalysisCube\\Dim Sales Rep.dim [Conception]",
+              "RelativeToolTip": "SalesAnalysisCube\\Dim Sales Rep.dim [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T20:50:57.834Z",
+              "EditorCaption": " [Conception]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

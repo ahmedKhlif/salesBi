@@ -1,0 +1,19 @@
+{
+  "name": "saleslens-bi-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "web",
+    "api",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --prefix web",
+    "dev:api": "npm run start:dev --prefix api",
+    "build:web": "npm run build --prefix web",
+    "build:api": "npm run build --prefix api",
+    "lint:web": "npm run lint --prefix web",
+    "lint:api": "npm run lint --prefix api",
+    "test:api": "npm run test --prefix api"
+  }
+}
