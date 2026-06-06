@@ -32,7 +32,15 @@ import type {
 export class MockCubeAdapter implements CubeAdapter {
   readonly mode = 'mock' as const;
 
-  getFilterOptions(): FilterOptionsPayload {
+  getFilterOptions(filters: GlobalFiltersDto): FilterOptionsPayload {
+    const filteredSales = applyFilters(mockWarehouse, filters);
+    const salesForRange = filteredSales.length
+      ? filteredSales
+      : mockWarehouse.sales;
+    const orderedDates = [
+      ...new Set(salesForRange.map((line) => line.fullDate)),
+    ].sort((left, right) => left.localeCompare(right));
+
     return {
       years: [...new Set(mockWarehouse.sales.map((line) => line.year))].map(
         (value) => ({ label: String(value), value }),
@@ -79,6 +87,10 @@ export class MockCubeAdapter implements CubeAdapter {
         { label: 'This Year', value: 'thisYear' },
         { label: 'Custom', value: 'custom' },
       ],
+      dateRange: {
+        minDate: orderedDates[0],
+        maxDate: orderedDates.at(-1),
+      },
     };
   }
 

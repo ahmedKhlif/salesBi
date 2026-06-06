@@ -9,7 +9,7 @@ export class FiltersService {
 
   list(filters: GlobalFiltersDto) {
     return buildApiResponse(
-      this.cubeService.getFilterOptions(),
+      this.cubeService.getFilterOptions(filters),
       filters,
       this.cubeService.mode,
     );

@@ -1,11 +1,12 @@
 "use client";
 
-import type { BreakdownRow, SeriesPoint } from "@saleslens/contracts";
+import type { BreakdownRow, FilterOptionsPayload, GlobalFilters, SeriesPoint } from "@saleslens/contracts";
 import { useMemo, useState } from "react";
 import { RefreshCcw } from "lucide-react";
 import { ExportMenu } from "@/components/export/export-menu";
 import { useFilters } from "@/components/providers/filter-provider";
 import { useApiQuery } from "@/lib/api/hooks";
+import { ChartDateRangePicker } from "./chart-date-range-picker";
 import { ChartCard } from "./chart-card";
 import { SeriesChart } from "./series-chart";
 
@@ -25,6 +26,13 @@ export function ChartBlock({
     fromDate?: string;
     toDate?: string;
   }>({});
+  const rangeScope = useMemo<GlobalFilters>(() => {
+    const nextScope = { ...filters };
+    delete nextScope.fromDate;
+    delete nextScope.toDate;
+    delete nextScope.preset;
+    return nextScope;
+  }, [filters]);
 
   const chartFilters = useMemo(
     () => ({
@@ -33,6 +41,11 @@ export function ChartBlock({
       preset: dateOverrides.fromDate || dateOverrides.toDate ? "custom" : filters.preset,
     }),
     [dateOverrides, filters],
+  );
+  const { data: filterOptions } = useApiQuery<FilterOptionsPayload>(
+    `${endpoint}-date-range`,
+    "/filters",
+    rangeScope,
   );
 
   const { data, isLoading, isError, refetch } = useApiQuery<SeriesPoint[] | BreakdownRow[]>(
@@ -61,41 +74,15 @@ export function ChartBlock({
       subtitle={subtitle}
       actions={
         <>
-          <label className="text-xs text-[var(--muted)]">
-            <span className="mb-1 block">From</span>
-            <input
-              type="date"
-              value={dateOverrides.fromDate ?? filters.fromDate ?? ""}
-              onChange={(event) =>
-                setDateOverrides((current) => ({
-                  ...current,
-                  fromDate: event.target.value || undefined,
-                }))
-              }
-              className="rounded-2xl border border-[var(--border)] bg-transparent px-3 py-2 text-sm text-[var(--foreground)]"
-            />
-          </label>
-          <label className="text-xs text-[var(--muted)]">
-            <span className="mb-1 block">To</span>
-            <input
-              type="date"
-              value={dateOverrides.toDate ?? filters.toDate ?? ""}
-              onChange={(event) =>
-                setDateOverrides((current) => ({
-                  ...current,
-                  toDate: event.target.value || undefined,
-                }))
-              }
-              className="rounded-2xl border border-[var(--border)] bg-transparent px-3 py-2 text-sm text-[var(--foreground)]"
-            />
-          </label>
-          <button
-            type="button"
-            onClick={() => setDateOverrides({})}
-            className="rounded-2xl border border-[var(--border)] px-3 py-2 text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
-          >
-            Reset dates
-          </button>
+          <ChartDateRangePicker
+            value={{
+              fromDate: dateOverrides.fromDate ?? filters.fromDate,
+              toDate: dateOverrides.toDate ?? filters.toDate,
+            }}
+            minDate={filterOptions?.data.dateRange.minDate}
+            maxDate={filterOptions?.data.dateRange.maxDate}
+            onChange={(nextRange) => setDateOverrides(nextRange)}
+          />
           <button
             type="button"
             onClick={() => void refetch()}

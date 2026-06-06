@@ -22,7 +22,7 @@ export default function DashboardPage() {
         </p>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2 2xl:grid-cols-5">
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 min-[1900px]:grid-cols-5">
         {(overview.data?.data.kpis ?? []).map((metric) => (
           <KpiCard key={metric.id} metric={metric} />
         ))}

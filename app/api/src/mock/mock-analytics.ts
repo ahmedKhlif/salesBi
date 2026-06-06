@@ -168,6 +168,13 @@ export function buildKpis(
   const currentSummary = summarize(current);
   const previousSummary = summarize(previous);
 
+  return buildKpisFromSummaries(currentSummary, previousSummary);
+}
+
+export function buildKpisFromSummaries(
+  currentSummary: Summary,
+  previousSummary: Summary,
+): MetricCard[] {
   const metrics: Array<{
     id: string;
     title: string;

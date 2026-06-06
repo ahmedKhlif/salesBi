@@ -18,7 +18,7 @@ export interface CubeOverviewPayload {
 
 export interface CubeAdapter {
   readonly mode: 'mock' | 'ssas';
-  getFilterOptions(): unknown;
+  getFilterOptions(filters: GlobalFiltersDto): unknown;
   getOverview(filters: GlobalFiltersDto): CubeOverviewPayload;
   getTrend(
     filters: GlobalFiltersDto,

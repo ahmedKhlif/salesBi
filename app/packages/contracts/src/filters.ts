@@ -30,6 +30,11 @@ export interface FilterOption<T = string | number> {
   value: T;
 }
 
+export interface FilterDateRange {
+  minDate?: string;
+  maxDate?: string;
+}
+
 export interface FilterOptionsPayload {
   years: FilterOption<number>[];
   quarters: FilterOption<number>[];
@@ -42,6 +47,7 @@ export interface FilterOptionsPayload {
   orderStatuses: FilterOption<string>[];
   paymentStatuses: FilterOption<string>[];
   presets: FilterOption<DatePreset>[];
+  dateRange: FilterDateRange;
 }
 
 export interface SavedFilterPreset {

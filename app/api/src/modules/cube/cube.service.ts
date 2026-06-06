@@ -22,8 +22,8 @@ export class CubeService {
     return this.adapter.mode;
   }
 
-  getFilterOptions() {
-    return this.adapter.getFilterOptions();
+  getFilterOptions(filters: GlobalFiltersDto) {
+    return this.adapter.getFilterOptions(filters);
   }
   getOverview(filters: GlobalFiltersDto) {
     return this.adapter.getOverview(filters);

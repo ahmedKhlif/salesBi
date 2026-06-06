@@ -2,8 +2,13 @@
 
 import type { BreakdownRow, SeriesPoint } from "@saleslens/contracts";
 import ReactECharts from "echarts-for-react";
+import { formatNumber } from "@/lib/formatters";
 
 type Variant = "line" | "bar" | "donut" | "combo" | "scatter";
+
+function truncateLabel(label: string, maxLength = 20) {
+  return label.length > maxLength ? `${label.slice(0, maxLength - 1)}…` : label;
+}
 
 function getPrimaryValue(item: SeriesPoint | BreakdownRow) {
   return "value" in item ? item.value : item.metric;
@@ -31,12 +36,71 @@ export function SeriesChart({
   const option =
     variant === "donut"
       ? {
-          tooltip: { trigger: "item" },
-          legend: { bottom: 0, textStyle: { color: "#64748B" } },
+          color: [
+            "#5B7BE0",
+            "#7CCAA5",
+            "#F6C453",
+            "#6CB7D8",
+            "#49B07D",
+            "#FF8B4F",
+            "#A66ED4",
+            "#E46FC0",
+            "#7C8FE6",
+            "#2EC4B6",
+          ],
+          tooltip: {
+            trigger: "item",
+            valueFormatter: (value: number) => formatNumber(value),
+          },
+          legend: {
+            type: "scroll",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            itemWidth: 12,
+            itemHeight: 12,
+            itemGap: 14,
+            pageIconColor: "#2563EB",
+            pageIconInactiveColor: "rgba(100,116,139,0.35)",
+            pageTextStyle: { color: "#64748B" },
+            textStyle: {
+              color: "#64748B",
+              width: 130,
+              overflow: "truncate",
+            },
+            formatter: (name: string) => truncateLabel(name, 24),
+          },
           series: [
             {
               type: "pie",
-              radius: ["45%", "72%"],
+              radius: ["48%", "72%"],
+              center: ["50%", "36%"],
+              avoidLabelOverlap: true,
+              minAngle: 3,
+              itemStyle: {
+                borderColor: "#0F172A",
+                borderWidth: 3,
+              },
+              label: {
+                show: false,
+              },
+              labelLine: {
+                show: false,
+              },
+              emphasis: {
+                scale: true,
+                scaleSize: 6,
+                label: {
+                  show: true,
+                  position: "center",
+                  formatter: ({ name, percent }: { name: string; percent?: number }) =>
+                    `${truncateLabel(name, 22)}\n${percent ?? 0}%`,
+                  color: "#E2E8F0",
+                  fontSize: 13,
+                  fontWeight: 700,
+                  lineHeight: 20,
+                },
+              },
               data: data.map((item) => ({
                 name: item.label,
                 value: "value" in item ? item.value : item.metric,

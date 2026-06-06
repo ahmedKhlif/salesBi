@@ -3,6 +3,7 @@ import { CubeService } from './cube.service';
 import { MockCubeAdapter } from './adapters/mock-cube.adapter';
 import { SsasCubeAdapter } from './adapters/ssas-cube.adapter';
 import { LiveWarehouseService } from './live/live-warehouse.service';
+import { MdxExecutorService } from './mdx/mdx-executor.service';
 
 @Module({
   providers: [
@@ -10,6 +11,7 @@ import { LiveWarehouseService } from './live/live-warehouse.service';
     MockCubeAdapter,
     SsasCubeAdapter,
     LiveWarehouseService,
+    MdxExecutorService,
   ],
   exports: [CubeService],
 })
